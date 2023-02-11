@@ -3,9 +3,15 @@ import {
   MagnifyingGlassIcon,
   ShoppingCartIcon,
   XMarkIcon,
-  UserIcon
+  ListBulletIcon,
+  UsersIcon,
+  UserCircleIcon
 } from '@heroicons/react/24/outline'
 import { Disclosure } from '@headlessui/react'
+import { CiLogout, CiLogin } from 'react-icons/ci'
+import { MdChildCare } from 'react-icons/md'
+import { FcBusinessman, FcBusinesswoman } from 'react-icons/fc'
+import { AiOutlineInbox } from 'react-icons/ai'
 
 interface Props {}
 
@@ -44,17 +50,63 @@ export function Header(props: Props) {
                   </Disclosure.Button>
                 </div>
                 {/* Menu content */}
-                <div className='grid py-1 md:hidden'>
-                  <MenuItem label={'Hombres'} href={''} />
-                  <MenuItem label={'Mujeres'} href={''} />
-                  <MenuItem label={'Niños'} href={''} />
+                <div className='grid py-1'>
+                  <MenuItem
+                    label={'Perfil'}
+                    href={''}
+                    icon={UserCircleIcon}
+                  />
+                  <MenuItem
+                    label={'Mis ordenes'}
+                    href={''}
+                    icon={ListBulletIcon}
+                  />
+                  <div className='md:hidden'>
+                    <MenuItem
+                      label={'Hombres'}
+                      href={''}
+                      icon={FcBusinessman}
+                    />
+                    <MenuItem
+                      label={'Mujeres'}
+                      href={''}
+                      icon={FcBusinesswoman}
+                    />
+                    <MenuItem
+                      label={'Niños'}
+                      href={''}
+                      icon={MdChildCare}
+                    />
+                  </div>
+                  <MenuItem
+                    label={'Ingresar'}
+                    href={''}
+                    icon={CiLogin}
+                  />
+                  <MenuItem
+                    label={'Salir'}
+                    href={''}
+                    icon={CiLogout}
+                  />
                 </div>
 
                 {/* Menu footer */}
                 <div className='grid py-1'>
-                  <MenuItem label={'Hombres'} href={''} />
-                  <MenuItem label={'Mujeres'} href={''} />
-                  <MenuItem label={'Niños'} href={''} />
+                  <MenuItem
+                    label={'Productos'}
+                    href={''}
+                    icon={AiOutlineInbox}
+                  />
+                  <MenuItem
+                    label={'Ordenes'}
+                    href={''}
+                    icon={ListBulletIcon}
+                  />
+                  <MenuItem
+                    label={'Usuarios'}
+                    href={''}
+                    icon={UsersIcon}
+                  />
                 </div>
               </div>
             </Disclosure.Panel>
@@ -101,16 +153,18 @@ const NavItemWithIcon = ({
   )
 }
 
-interface MenuItemProps extends NavItemProps {}
+interface MenuItemProps extends NavItemProps {
+  icon: React.ElementType<any>
+}
 
-const MenuItem = ({ href, label }: MenuItemProps) => {
+const MenuItem = ({ href, label, icon: Icon }: MenuItemProps) => {
   return (
     <>
       <Link
         href={href}
         className='flex items-center rounded-md hover:bg-gray-50 p-4'
       >
-        <UserIcon className='h-6 w-6 flex-shrink-0 text-indigo-600' />
+        <Icon className='h-6 w-6 flex-shrink-0 text-indigo-600' />
         <span className='ml-3 text-base font-medium text-gray-900'>
           {label}
         </span>
