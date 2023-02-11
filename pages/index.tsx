@@ -1,19 +1,17 @@
 import { ShopLayout } from '@/components/layouts'
 import { ProductList } from '@/components/products'
-import { Header } from '@/components/ui/Header'
 
 export default function Home() {
   return (
     <>
-      {/* <ShopLayout
+      <ShopLayout
         title='Teslo Shop - Home'
         pageDescription='Encuentra los mejores  productos de Teslo aquí'
       >
         <h1 className='text-3xl font-bold'>Tienda</h1>
         <h1 className='mb-2 text-2xl'>Todos los productos</h1>
         <ProductList />
-      </ShopLayout> */}
-      <Header />
+      </ShopLayout>
     </>
   )
 }

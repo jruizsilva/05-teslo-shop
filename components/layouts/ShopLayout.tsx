@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { Header } from '../ui/Header'
 
 interface Props {
   title: string
@@ -29,6 +30,7 @@ export function ShopLayout({
           <meta name='og:image' content={imgFullUrl} />
         ) : null}
       </Head>
+      <Header />
 
       {/* <Sidebar/> */}
 

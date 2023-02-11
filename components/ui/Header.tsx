@@ -19,7 +19,7 @@ export function Header(props: Props) {
   return (
     <>
       <Disclosure>
-        <header className='bg-white'>
+        <header className='bg-white ring-1 ring-black ring-opacity-5'>
           <nav className='p-6 mx-auto container flex justify-between items-center relative'>
             <NavItem label={'Teslo Shop'} href={''} />
             <div className=' gap-8 hidden md:flex'>
@@ -38,7 +38,7 @@ export function Header(props: Props) {
                 Menu
               </Disclosure.Button>
             </div>
-            <Disclosure.Panel className='bg-white absolute right-0 top-2 container text-gray-500 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5'>
+            <Disclosure.Panel className='bg-white absolute right-0 top-2 container text-gray-500 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 z-10'>
               <div className='divide-y-2 divide-gray-50'>
                 {/* Menu header */}
                 <div className='flex justify-between items-center p-4'>
@@ -145,7 +145,7 @@ const NavItemWithIcon = ({
     <button className='relative group'>
       <SVG className='text-base font-medium w-6 text-gray-500 group-hover:text-gray-900 transition-all duration-100' />
       {showNotification && (
-        <div className='absolute w-5 h-5 rounded-full -top-2 -right-2 bg-red-400 flex justify-center items-center text-sm group-hover:bg-red-500 transition-all duration-100'>
+        <div className='absolute w-5 h-5 rounded-full -top-2 -right-2 text-white bg-red-400 flex justify-center items-center text-sm group-hover:bg-red-500 transition-all duration-100'>
           12
         </div>
       )}
