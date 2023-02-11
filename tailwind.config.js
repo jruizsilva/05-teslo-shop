@@ -5,28 +5,44 @@ module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './stories/**/*.{js,ts,jsx,tsx}'
+    './components/**/*.{js,ts,jsx,tsx}'
   ],
-  darkMode: ['class'],
   theme: {
     extend: {
       colors: {
-        'dark-background-primary': colors.zinc[900],
-        'dark-background-secondary': colors.zinc[800],
-        'dark-foreground': colors.zinc[700],
-        'dark-text': colors.zinc[100],
+        background100: colors.neutral[100],
+        border400: colors.neutral[400],
+        foreground300: colors.neutral[300],
+        text500: colors.neutral[500],
+        text600: colors.neutral[600],
+        text800: colors.neutral[800],
+        text900: colors.neutral[900],
         primary: {
-          50: '#eef2ff',
-          100: '#e0e7ff',
-          200: '#c7d2fe',
-          300: '#a5b4fc',
-          400: '#818cf8',
-          500: '#6366f1',
-          600: '#4f46e5',
-          700: '#4338ca',
-          800: '#3730a3',
-          900: '#312e81'
+          background700: colors.indigo[700],
+          border300: colors.indigo[300],
+          ring: colors.indigo[500],
+          foreground100: colors.indigo[100],
+          foreground900: colors.indigo[900],
+          text100: colors.indigo[100],
+          text800: colors.indigo[800]
+        },
+        error: {
+          background100: colors.red[100],
+          border300: colors.red[300],
+          text500: colors.red[500],
+          text700: colors.red[700]
+        },
+        warning: {
+          background100: colors.yellow[100],
+          border300: colors.yellow[300],
+          text500: colors.yellow[500],
+          text700: colors.yellow[700]
+        },
+        success: {
+          background100: colors.green[100],
+          border300: colors.green[300],
+          text500: colors.green[500],
+          text700: colors.green[700]
         }
       },
       fontFamily: {
