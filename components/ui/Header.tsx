@@ -2,7 +2,8 @@ import Link from 'next/link'
 import {
   MagnifyingGlassIcon,
   ShoppingCartIcon,
-  XMarkIcon
+  XMarkIcon,
+  UserIcon
 } from '@heroicons/react/24/outline'
 import { Disclosure } from '@headlessui/react'
 
@@ -13,9 +14,9 @@ export function Header(props: Props) {
     <>
       <Disclosure>
         <header className='bg-white'>
-          <nav className='p-6 mx-auto container py-6 flex justify-between items-center relative'>
+          <nav className='p-6 mx-auto container flex justify-between items-center relative'>
             <NavItem label={'Teslo Shop'} href={''} />
-            <div className='flex gap-8 md:hidden'>
+            <div className=' gap-8 hidden md:flex'>
               <NavItem label={'Hombres'} href={''} />
               <NavItem label={'Mujeres'} href={''} />
               <NavItem label={'Niños'} href={''} />
@@ -27,18 +28,36 @@ export function Header(props: Props) {
                 showNotification
               />
 
-              <Disclosure.Panel className='bg-white absolute right-0 top-2 container px-5 pt-5 pb-6 text-gray-500 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5'>
-                <div className='flex justify-between items-center'>
-                  <h3>Teslo Shop!</h3>
-                  <Disclosure.Button className='text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-100 p-2 rounded-md'>
-                    <XMarkIcon className='w-6 h-6 text-gray-500 ' />
-                  </Disclosure.Button>
-                </div>
-              </Disclosure.Panel>
               <Disclosure.Button className='text-base font-medium text-gray-500 hover:text-gray-900'>
                 Menu
               </Disclosure.Button>
             </div>
+            <Disclosure.Panel className='bg-white absolute right-0 top-2 container text-gray-500 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5'>
+              <div className='divide-y-2 divide-gray-50'>
+                {/* Menu header */}
+                <div className='flex justify-between items-center p-4'>
+                  <h3 className='ml-3 text-base font-medium text-gray-900'>
+                    Teslo Shop
+                  </h3>
+                  <Disclosure.Button className='text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-100 p-2 rounded-md'>
+                    <XMarkIcon className='w-6 h-6 text-gray-500 ' />
+                  </Disclosure.Button>
+                </div>
+                {/* Menu content */}
+                <div className='grid py-1 md:hidden'>
+                  <MenuItem label={'Hombres'} href={''} />
+                  <MenuItem label={'Mujeres'} href={''} />
+                  <MenuItem label={'Niños'} href={''} />
+                </div>
+
+                {/* Menu footer */}
+                <div className='grid py-1'>
+                  <MenuItem label={'Hombres'} href={''} />
+                  <MenuItem label={'Mujeres'} href={''} />
+                  <MenuItem label={'Niños'} href={''} />
+                </div>
+              </div>
+            </Disclosure.Panel>
           </nav>
         </header>
       </Disclosure>
@@ -79,5 +98,23 @@ const NavItemWithIcon = ({
         </div>
       )}
     </button>
+  )
+}
+
+interface MenuItemProps extends NavItemProps {}
+
+const MenuItem = ({ href, label }: MenuItemProps) => {
+  return (
+    <>
+      <Link
+        href={href}
+        className='flex items-center rounded-md hover:bg-gray-50 p-4'
+      >
+        <UserIcon className='h-6 w-6 flex-shrink-0 text-indigo-600' />
+        <span className='ml-3 text-base font-medium text-gray-900'>
+          {label}
+        </span>
+      </Link>
+    </>
   )
 }
