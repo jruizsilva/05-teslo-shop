@@ -3,29 +3,42 @@ import {
   MagnifyingGlassIcon,
   ShoppingCartIcon
 } from '@heroicons/react/24/outline'
+import { Disclosure } from '@headlessui/react'
 
 interface Props {}
 
 export function Header(props: Props) {
   return (
     <>
-      <header className='bg-white'>
-        <nav className='p-6 mx-auto container py-6 flex justify-between items-center'>
-          <NavItem label={'Teslo Shop'} href={''} />
-          <div className='flex gap-8'>
-            <NavItem label={'Hombres'} href={''} />
-            <NavItem label={'Mujeres'} href={''} />
-            <NavItem label={'Niños'} href={''} />
-          </div>
-          <div className='flex gap-8'>
-            <NavItemWithIcon icon={MagnifyingGlassIcon} />
-            <NavItemWithIcon
-              icon={ShoppingCartIcon}
-              showNotification
-            />
-          </div>
-        </nav>
-      </header>
+      <Disclosure>
+        <header className='bg-white'>
+          <nav className='p-6 mx-auto container py-6 flex justify-between items-center relative'>
+            <NavItem label={'Teslo Shop'} href={''} />
+            <div className='flex gap-8 md:hidden'>
+              <NavItem label={'Hombres'} href={''} />
+              <NavItem label={'Mujeres'} href={''} />
+              <NavItem label={'Niños'} href={''} />
+            </div>
+            <div className='flex gap-8'>
+              <NavItemWithIcon icon={MagnifyingGlassIcon} />
+              <NavItemWithIcon
+                icon={ShoppingCartIcon}
+                showNotification
+              />
+
+              <Disclosure.Panel className='bg-white absolute right-0 container px-5 pt-5 pb-6 text-gray-500'>
+                Yes!
+                <Disclosure.Button className='text-base font-medium text-gray-500 hover:text-gray-900'>
+                  Menu
+                </Disclosure.Button>
+              </Disclosure.Panel>
+              <Disclosure.Button className='text-base font-medium text-gray-500 hover:text-gray-900'>
+                Menu
+              </Disclosure.Button>
+            </div>
+          </nav>
+        </header>
+      </Disclosure>
     </>
   )
 }
