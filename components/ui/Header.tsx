@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import {
   MagnifyingGlassIcon,
-  ShoppingCartIcon
+  ShoppingCartIcon,
+  XMarkIcon
 } from '@heroicons/react/24/outline'
 import { Disclosure } from '@headlessui/react'
 
@@ -26,11 +27,13 @@ export function Header(props: Props) {
                 showNotification
               />
 
-              <Disclosure.Panel className='bg-white absolute right-0 container px-5 pt-5 pb-6 text-gray-500'>
-                Yes!
-                <Disclosure.Button className='text-base font-medium text-gray-500 hover:text-gray-900'>
-                  Menu
-                </Disclosure.Button>
+              <Disclosure.Panel className='bg-white absolute right-0 top-2 container px-5 pt-5 pb-6 text-gray-500 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5'>
+                <div className='flex justify-between items-center'>
+                  <h3>Teslo Shop!</h3>
+                  <Disclosure.Button className='text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-100 p-2 rounded-md'>
+                    <XMarkIcon className='w-6 h-6 text-gray-500 ' />
+                  </Disclosure.Button>
+                </div>
               </Disclosure.Panel>
               <Disclosure.Button className='text-base font-medium text-gray-500 hover:text-gray-900'>
                 Menu
