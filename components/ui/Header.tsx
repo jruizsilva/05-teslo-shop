@@ -7,7 +7,7 @@ import {
   UsersIcon,
   UserCircleIcon
 } from '@heroicons/react/24/outline'
-import { Disclosure } from '@headlessui/react'
+import { Popover } from '@headlessui/react'
 import { CiLogout, CiLogin } from 'react-icons/ci'
 import { MdChildCare } from 'react-icons/md'
 import { FcBusinessman, FcBusinesswoman } from 'react-icons/fc'
@@ -18,7 +18,7 @@ interface Props {}
 export function Header(props: Props) {
   return (
     <>
-      <Disclosure>
+      <Popover>
         <header className='bg-white ring-1 ring-black ring-opacity-5'>
           <nav className='p-6 mx-auto container flex justify-between items-center relative'>
             <NavItem label={'Teslo Shop'} href={''} />
@@ -34,22 +34,22 @@ export function Header(props: Props) {
                 showNotification
               />
 
-              <Disclosure.Button className='text-base font-medium text-gray-500 hover:text-gray-900'>
+              <Popover.Button className='text-base font-medium text-gray-500 hover:text-gray-900'>
                 Menu
-              </Disclosure.Button>
+              </Popover.Button>
             </div>
-            <Disclosure.Panel className='bg-white absolute right-0 top-2 container text-gray-500 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 z-10'>
+            <Popover.Panel className='bg-white absolute right-0 top-2 container max-w-xs text-gray-500 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 z-10'>
               <div className='divide-y-2 divide-gray-50'>
                 {/* Menu header */}
                 <div className='flex justify-between items-center p-4'>
                   <h3 className='ml-3 text-base font-medium text-gray-900'>
                     Teslo Shop
                   </h3>
-                  <Disclosure.Button className='text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-100 p-2 rounded-md'>
+                  <Popover.Button className='text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-100 p-2 rounded-md'>
                     <XMarkIcon className='w-6 h-6 text-gray-500 ' />
-                  </Disclosure.Button>
+                  </Popover.Button>
                 </div>
-                {/* Menu content */}
+                {/* Menu */}
                 <div className='grid py-1'>
                   <MenuItem
                     label={'Perfil'}
@@ -90,7 +90,7 @@ export function Header(props: Props) {
                   />
                 </div>
 
-                {/* Menu footer */}
+                {/* Admin menu */}
                 <div className='grid py-1'>
                   <MenuItem
                     label={'Productos'}
@@ -109,10 +109,10 @@ export function Header(props: Props) {
                   />
                 </div>
               </div>
-            </Disclosure.Panel>
+            </Popover.Panel>
           </nav>
         </header>
-      </Disclosure>
+      </Popover>
     </>
   )
 }
