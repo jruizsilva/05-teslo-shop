@@ -14,7 +14,7 @@ export function ProductList() {
           </div>
           <div className='mt-4 flex justify-between'>
             <div>
-              <h3 className='text-sm text-gray-700 dark:text-dark-text'>
+              <h3 className='text-sm text-gray-700'>
                 <a href={product.slug}>
                   <span
                     aria-hidden='true'
@@ -23,11 +23,8 @@ export function ProductList() {
                   {product.title}
                 </a>
               </h3>
-              <p className='mt-1 text-sm text-gray-500 dark:text-dark-text'>
-                {product.inStock}
-              </p>
             </div>
-            <p className='text-sm font-medium text-gray-900 dark:text-dark-text'>
+            <p className='text-sm font-medium text-gray-900'>
               ${product.price}
             </p>
           </div>
