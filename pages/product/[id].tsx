@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { RadioGroup } from '@headlessui/react'
 import { ShopLayout } from '@/components/layouts'
+import { Slideshow } from '@/components/products'
 // import { Slideshow } from '@/components/products/Slideshow'
 
 const product = {
@@ -77,9 +78,11 @@ export default function ProductPage() {
 
   return (
     <ShopLayout title='Product page' pageDescription='product page'>
-      <div className=''>
-        <div className='space-y-2'>
-          {/* <Slideshow /> */}
+      <div className='flex flex-col lg:flex-row lg:gap-8'>
+        <div className='lg:max-w-md xl:max-w-xl'>
+          <Slideshow />
+        </div>
+        <div>
           <h2 className='sr-only'>Product information</h2>
           <h1 className='text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl'>
             {product.name}

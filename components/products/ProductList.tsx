@@ -15,7 +15,7 @@ export function ProductList() {
           <div className='mt-4 flex justify-between'>
             <div>
               <h3 className='text-sm text-gray-700'>
-                <a href={product.slug}>
+                <a href={`/product/${product.slug}`}>
                   <span
                     aria-hidden='true'
                     className='absolute inset-0'
