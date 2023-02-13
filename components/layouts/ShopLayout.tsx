@@ -30,7 +30,7 @@ export function ShopLayout({
           <meta name='og:image' content={imgFullUrl} />
         ) : null}
       </Head>
-      <Header />
+      {showHeader && <Header />}
 
       {/* <Sidebar/> */}
 
