@@ -3,7 +3,7 @@ interface Props {}
 export function OrderSummary(props: Props) {
   return (
     <>
-      <div className='bg-gray-50 p-9 rounded'>
+      <div className='bg-gray-50 p-9 rounded w-full'>
         <h2 className='font-medium text-gray-900 text-lg'>
           Order Summary
         </h2>
