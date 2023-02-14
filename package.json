@@ -25,6 +25,7 @@
     "typescript": "*"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.3",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
     "autoprefixer": "^10.4.13",
     "csstype": "^3.1.1",
