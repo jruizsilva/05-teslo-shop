@@ -1,12 +1,21 @@
-interface Props {}
+import Link from 'next/link'
 
-export function OrderSummary(props: Props) {
+interface Props {
+  showEditButtons?: boolean
+}
+
+export function OrderSummary({ showEditButtons = false }: Props) {
   return (
     <>
       <div className='bg-gray-50 p-9 rounded w-full'>
-        <h2 className='font-medium text-gray-900 text-lg'>
-          Order Summary
-        </h2>
+        <div className='flex items-center justify-between'>
+          <h2 className='font-medium text-gray-900 text-lg'>
+            Resumen (2 productos)
+          </h2>
+
+          {showEditButtons && <Link href='/cart'>Editar</Link>}
+        </div>
+
         <div className='flex border-b border-black border-opacity-5 py-6 '>
           <p className='text-base font-medium text-gray-400'>
             Subtotal
@@ -24,9 +33,7 @@ export function OrderSummary(props: Props) {
           </span>
         </div>
         <div className='flex py-6'>
-          <h3 className='text-gray-900 text-lg font-medium'>
-            Order total
-          </h3>
+          <h3 className='text-gray-900 text-lg font-medium'>Total</h3>
           <span className='ml-auto text-gray-900 text-lg font-medium'>
             $112.32
           </span>

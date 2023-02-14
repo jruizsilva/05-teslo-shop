@@ -7,8 +7,6 @@ import {
 
 const quantyties = [...Array(15)].map((_, idx) => idx + 1)
 
-console.log(quantyties)
-
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
