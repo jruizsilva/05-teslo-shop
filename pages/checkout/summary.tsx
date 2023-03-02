@@ -14,8 +14,8 @@ export default function CheckoutSummaryPage(props: Props) {
   return (
     <>
       <ShopLayout
-        title='Página del carrito'
-        pageDescription='Ve y edita los productos en el carrito'
+        title='Resumen de la orden'
+        pageDescription='Revisa y confirma la orden'
       >
         <div className='container mx-auto px-6 mb-12'>
           <h1 className='pb-12 font-bold text-3xl'>
@@ -28,7 +28,7 @@ export default function CheckoutSummaryPage(props: Props) {
             </div>
             <div className='lg:max-w-md flex-grow flex flex-col'>
               <OrderAddress />
-              <OrderSummary />
+              <OrderSummary buttonText='Confirmar orden' />
             </div>
           </div>
         </div>

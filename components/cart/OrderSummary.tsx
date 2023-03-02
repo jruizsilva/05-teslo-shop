@@ -2,9 +2,13 @@ import Link from 'next/link'
 
 interface Props {
   showEditButtons?: boolean
+  buttonText?: string
 }
 
-export function OrderSummary({ showEditButtons = false }: Props) {
+export function OrderSummary({
+  showEditButtons = false,
+  buttonText = 'Checkout'
+}: Props) {
   return (
     <>
       <div className='bg-gray-50 p-9 rounded w-full'>
@@ -42,7 +46,7 @@ export function OrderSummary({ showEditButtons = false }: Props) {
           type='button'
           className='text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded text-base w-full px-5 py-2.5 text-center mr-2 mb-2'
         >
-          Checkout
+          {buttonText}
         </button>
       </div>
     </>

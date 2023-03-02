@@ -10,7 +10,7 @@ export function OrderAddress({ showEditButtons = false }: Props) {
       <div className='bg-gray-50 px-9 pt-9 rounded w-full'>
         <div className='flex items-center justify-between'>
           <h2 className='font-medium text-gray-900 text-lg'>
-            Revisa los datos de envío
+            Datos de envío
           </h2>
 
           {showEditButtons && <Link href='/cart'>Editar</Link>}
