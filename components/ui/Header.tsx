@@ -22,7 +22,7 @@ export function Header(props: Props) {
       <Popover>
         <header className='bg-white ring-1 ring-black ring-opacity-5'>
           <nav className='p-6 mx-auto container flex justify-between items-center relative'>
-            <NavItem label='Teslo Shop' href='' />
+            <NavItem label='Teslo Shop' href='/' />
             <div className='gap-8 hidden md:flex'>
               <NavItem label={'Hombres'} href={''} />
               <NavItem label={'Mujeres'} href={''} />
