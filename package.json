@@ -21,6 +21,7 @@
     "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
     "react-slideshow-image": "^4.2.0",
     "typescript": "*"
   },
@@ -38,7 +39,6 @@
     "eslint-plugin-storybook": "^0.6.10",
     "postcss": "^8.4.21",
     "prettier-plugin-tailwindcss": "^0.2.2",
-    "react-icons": "^4.7.1",
     "storybook-dark-mode": "^2.0.5",
     "tailwindcss": "^3.2.4"
   }

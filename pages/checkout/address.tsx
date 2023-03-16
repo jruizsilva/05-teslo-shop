@@ -1,6 +1,5 @@
 import { ShopLayout } from '@/components/layouts'
-import { InputField } from '@/components/ui'
-import { SelectField } from '@/components/ui/SelectField'
+import { InputField, SelectField } from '@/components/ui'
 
 export default function CheckoutAddressPage(): JSX.Element {
   return (

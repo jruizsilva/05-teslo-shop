@@ -5,7 +5,6 @@ module.exports = {
   },
   extends: [
     'next/core-web-vitals',
-    'plugin:storybook/recommended',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'standard-with-typescript',
@@ -22,7 +21,6 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/consistent-type-definitions': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
-    '@typescript-eslint/no-unused-vars': 'warn',
-    '@typescript-eslint/consistent-type-assertions': 'off'
+    '@typescript-eslint/no-unused-vars': 'warn'
   }
 }
