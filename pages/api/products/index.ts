@@ -32,7 +32,7 @@ const getProducts = async (
 
   if (
     gender !== 'all' &&
-    SHOP_CONSTANTS.validGenders.includes(gender)
+    SHOP_CONSTANTS.validGenders.includes(gender[0])
   ) {
     condition = { gender }
   }
